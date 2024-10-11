@@ -30,6 +30,10 @@ const menuItems =[
     ]
  
 export default function Navigation() {
+  const Data = async()=>{
+    res = await fetch("http://localhost:3000/api/category");
+  }
+  console.log(Data);
     return (
       <nav className="w-full bg-[#232F3E] text-white py-2">
         {

@@ -20,7 +20,7 @@ export default function Header() {
           <input
             className=" w-full px-2 py-2 rounded-l-md text-black outline-none"
             type="text"
-            placeholder="Search product"
+            placeholder="Search blog"
           />
           <div className="bg-[#F3A847] p-2 rounded-r-md">
             <IoSearchSharp size={"24px"} className="text-black" />
@@ -33,7 +33,7 @@ export default function Header() {
           >
             <div className="hover:border border border-transparent hover:border-white p-2">
               <h1>Account</h1>
-              <p className="text-bg-grey font-serif">Signup or signin</p>
+              <p className="text-bg-grey font-serif">Sign-up or sign-in</p>
             </div>
           </Link>
         </div>
