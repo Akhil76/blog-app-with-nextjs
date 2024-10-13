@@ -32,37 +32,37 @@ const menuItems =[
     ]
  
 export default function Navigation() {
- const [categories,SetCategories] = useState({});
+  const [categories, SetCategories] = useState({}); // Initialize as an array
 
- const getCategories =async()=>{
-  try{
-    const res = fetch("http://localhost:3000/api/category",{
-      method:"GET"
-    });
-    const data = await res.json();
-    SetCategories(data.data);
-  }catch(error){
-    console.log(error);
-  }
- }
- useEffect(()=>{
-  getCategories();
- },[])
- console.log(categories)
+  const getCategories = async () => {
+    try {
+      const res = await fetch("http://localhost:3000/api/category", {
+        method: "GET",
+      });
+      const data = await res.json();
+      SetCategories(data.data); // Set the 'data' array to state
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  useEffect(() => {
+      getCategories();
+  }, []);
+
+  console.log(categories)
     return (
       <nav className="w-full bg-[#232F3E] text-white py-2">
         {
           
-          menuItems.map((item)=>{
-            return(
-              <Link 
-              href={item.href}
-              className="mx-2 hover:border border border-transparent hover:border-white p-2"
-              >
-                {item.label}
-              </Link>
-            )
-          })
+          categories.map((item)=>(
+            <Link 
+            href={item.Name}
+            className="mx-2 hover:border border border-transparent hover:border-white p-2"
+            >
+              {item.Name}
+            </Link>
+          ))
         }
       </nav>
     );
