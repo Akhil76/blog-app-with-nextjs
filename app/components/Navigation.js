@@ -48,21 +48,24 @@ export default function Navigation() {
 
   useEffect(() => {
       getCategories();
-  }, []);
+  },[]);
 
-  console.log(categories)
+  console.log(categories.length)
+
     return (
       <nav className="w-full bg-[#232F3E] text-white py-2">
         {
           
-          categories.map((item)=>(
-            <Link 
-            href={item.Name}
-            className="mx-2 hover:border border border-transparent hover:border-white p-2"
-            >
-              {item.Name}
-            </Link>
-          ))
+          categories.length>0? (
+            categories.map((item)=>(
+              <Link 
+              href={item.Name}
+              className="mx-2 hover:border border border-transparent hover:border-white p-2"
+              >
+                {item.Name}
+              </Link>
+            ))
+          ):(<p>Loading.....</p>)
         }
       </nav>
     );

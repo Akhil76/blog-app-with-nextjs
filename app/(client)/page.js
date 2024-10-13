@@ -27,9 +27,16 @@ export default function Home() {
     <div className="min-h-screen">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-2">
-          {posts.map((post) => (
-            <PostCard title={post.Title} description={post.Description}/>
-          ))}
+          {
+          posts.length>0? (
+            posts.map((post)=>(
+              <PostCard 
+              title={post.Title} 
+              description={post.Description}
+              />
+            ))
+          ):(<p>Loading....</p>)
+          }
         </div>
       </div>
     </div>

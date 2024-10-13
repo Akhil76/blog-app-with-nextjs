@@ -23,7 +23,7 @@ export async function POST(req){
     const body = await req.json();
     try{
         await connectDB()
-        const result = await CategoryModel.create();
+        const result = await CategoryModel.create(body);
         return NextResponse.json({
             "data":categories
         })
