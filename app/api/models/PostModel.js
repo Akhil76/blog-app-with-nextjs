@@ -1,5 +1,5 @@
 import mongoose from "mongoose";
-
+import { Schema } from "mongoose";
 
 
 const postSchema = new mongoose.Schema({
@@ -14,7 +14,7 @@ const postSchema = new mongoose.Schema({
     Picture: {
         type: String,
     },
-    Descripion: {
+    Description: {
         type: String,
         required: true,
     },
@@ -30,5 +30,5 @@ const postSchema = new mongoose.Schema({
     ],
 })
 
-const Post = mongoose.models.Category || mongoose.model('post', postSchema)
-export default Post;
+const PostModel = mongoose.models.post || mongoose.model('post', postSchema)
+export default PostModel;

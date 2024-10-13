@@ -1,4 +1,6 @@
+"use client"
 import Link from "next/link";
+import { useEffect, useState } from "react";
 
 
 const menuItems =[
@@ -30,13 +32,27 @@ const menuItems =[
     ]
  
 export default function Navigation() {
-  const Data = async()=>{
-    res = await fetch("http://localhost:3000/api/category");
+ const [categories,SetCategories] = useState({});
+
+ const getCategories =async()=>{
+  try{
+    const res = fetch("http://localhost:3000/api/category",{
+      method:"GET"
+    });
+    const data = await res.json();
+    SetCategories(data.data);
+  }catch(error){
+    console.log(error);
   }
-  console.log(Data);
+ }
+ useEffect(()=>{
+  getCategories();
+ },[])
+ console.log(categories)
     return (
       <nav className="w-full bg-[#232F3E] text-white py-2">
         {
+          
           menuItems.map((item)=>{
             return(
               <Link 

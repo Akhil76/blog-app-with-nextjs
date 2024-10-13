@@ -1,5 +1,5 @@
 import mongoose from "mongoose";
-
+import { Schema } from "mongoose";
 
 
 const userSchema = new mongoose.Schema({
@@ -30,5 +30,5 @@ const userSchema = new mongoose.Schema({
     ],
 })
 
-const User = mongoose.models.Category || mongoose.model('user', userSchema)
-export default User;
+const UserModel = mongoose.models.user || mongoose.model('user', userSchema)
+export default UserModel;
