@@ -59,7 +59,7 @@ export default function Navigation() {
           categories.length>0? (
             categories.map((item)=>(
               <Link 
-              href={item.Name}
+              href={`/${item.Name}`}
               className="mx-2 hover:border border border-transparent hover:border-white p-2"
               >
                 {item.Name}

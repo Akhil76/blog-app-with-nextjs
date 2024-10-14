@@ -8,7 +8,7 @@ export default function PostCard(props) {
     return (
         <div class="bg-white rounded-md shadow-lg p-3 flex flex-col justify-between">
             <div class="relative overflow-hidden">
-                <Link href={`/product/${id}`}>
+                <Link href={`/post/${id}`}>
                     <img class="object-cover w-full h-full" src={picture} alt="Product" />
                     {/* <div class="absolute inset-0 bg-black opacity-40"></div>
                     <div class="absolute inset-0 flex items-center justify-center">

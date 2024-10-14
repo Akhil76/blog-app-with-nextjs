@@ -1,6 +1,6 @@
 "use client";
 import { useEffect, useState } from "react";
-import PostCard from "../components/PostCart";
+import PostCard from "../components/PostCard";
 
 export default function Home() {
   const [posts, setPosts] = useState([]); // Initialize as an array
@@ -31,6 +31,7 @@ export default function Home() {
           posts.length>0? (
             posts.map((post)=>(
               <PostCard 
+              id={post._id}
               title={post.Title} 
               description={post.Description}
               />
