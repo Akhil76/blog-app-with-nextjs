@@ -22,7 +22,7 @@ const userSchema = new mongoose.Schema({
         type: Date,
         default: new Date()
     },
-    Posts: [
+    LikedPosts:[
         {
             type: Schema.Types.ObjectId,
             ref: 'post'
