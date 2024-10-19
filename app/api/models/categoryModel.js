@@ -4,6 +4,11 @@ const categorySchema = new mongoose.Schema({
     Name:{
         type:String,
         required:true,
+        unique:true 
+    },
+    Date:{
+        type: Date,
+        default: new Date()
     }
   
 })
