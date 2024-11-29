@@ -1,10 +1,10 @@
 
 
 
-export default function Dashboard() {
+export default function admin() {
     return (
       <main>
-       <h1>Dashboard</h1>
+       <h1>Dashboard Home</h1>
       </main>
     );
   }
