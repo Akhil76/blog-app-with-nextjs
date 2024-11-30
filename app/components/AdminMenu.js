@@ -21,31 +21,14 @@ const menuItems = [
         href: "/admin"
       },
       {
-        icon: <FaBorderAll size="20" />,
-        label: "Orders",
-        href: "/admin/orders"
-      },
-      {
-        icon: <AiFillProduct size="20" />,
-        label: "Products",
-        href: "/admin/products",
-        subitems: [
-          {
-            icon: <IoHome size="20" />,
-            label: "Add Product",
-            href: "/admin/product/addproduct"
-          },
-          {
-            icon: <IoHome size="20" />,
-            label: "Edit Product",
-            href: "/admin/product/editproduct"
-          }
-        ]
+        icon: <BsPeopleFill size="20" />,
+        label: "Posts",
+        href: "/admin/posts"
       },
       {
         icon: <BsPeopleFill size="20" />,
-        label: "Customers",
-        href: "/admin/customers"
+        label: "Users",
+        href: "/admin/users"
       },
       {
         icon: <FaChartArea size="20" />,
